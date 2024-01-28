@@ -24,11 +24,22 @@
 
 <body>
     <section class="content">
-        <h1>Pokedex</h1>
+        <h1 class="pokedex-title">Pokedex</h1>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
+
+        <div class="bulbasaur-details">
+            <img src="${bulbasaur.photo}" alt="${bulbasaur.name}" class="bulbasaur-icon">
+            <h2>${bulbasaur.name}</h2>
+            <p>Number: #${bulbasaur.number}</p>
+            <p>Type: ${bulbasaur.type}</p>
+            <p>Special Traits: Grass & Poison</p>
+            <p>Evolution: Ivysaur </p>
+            <p>Weight: 6.9kg</p>
+           
+        </div>
 
         <div class="pagination">
             <button id="loadMoreButton" type="button">

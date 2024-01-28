@@ -1,4 +1,12 @@
+
+.pokedex-title {
+    margin-bottom: 1rem; 
+    align-self: flex-start;
+}
+
 .pokemons {
+    width: 70%;
+    align-self: center;
     display: grid;
     grid-template-columns: 1fr;
     margin: 0;
@@ -163,3 +171,62 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+.bulbasaur-highlight {
+    border: 2px solid #4CAF50; /* Cor verde como destaque */
+}
+
+.bulbasaur-details {
+    width: 30%;
+    background-color: #4CAF50;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    border: 2px solid #4CAF50;
+    border-radius: 20px; 
+    overflow: hidden;
+
+    margin: 20px;
+    max-width: 400px;
+
+}
+
+.bulbasaur-details h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color:#ffffff 
+}
+
+.bulbasaur-details p:not(:first-child) {
+    border-radius: 90px;
+    background-color: rgb(131, 220, 88);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    color: #ffff;
+    
+}
+
+.bulbasaur-icon {
+    max-width: 100px; 
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.content {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.pokemons {
+    width: 70%; 
+}
+
+.bulbasaur-details {
+    width: 25%; 
+    margin-top: 1rem; 
+}
+

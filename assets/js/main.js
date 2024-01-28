@@ -6,6 +6,12 @@ const limit = 10
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
+
+    let specialClass = '';
+    if (pokemon.number === 1) {
+        specialClass = 'bulbasaur-highlight';
+    }
+
     return `
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
@@ -29,6 +35,32 @@ function loadPokemonItens(offset, limit) {
         pokemonList.innerHTML += newHtml
     })
 }
+
+function displayBulbasaurDetails() {
+    pokeApi.getPokemonDetail({ url: 'https://pokeapi.co/api/v2/pokemon/1/' }).then((bulbasaur) => {
+        const bulbasaurDetails = `
+            <div class="bulbasaur-details">
+                <img src="${bulbasaur.photo}" alt="${bulbasaur.name}" class="bulbasaur-icon">
+                <h2>${bulbasaur.name}</h2>
+                <p>Number: #${bulbasaur.number}</p>
+                <p>Type: ${bulbasaur.type}</p>
+                <p>Special Traits: Grass & Poison</p>
+                <p>Evolution: Ivysaur </p>
+                <p>Weight: 6.9kg</p>
+                <!-- Adicione mais informações conforme necessário -->
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('afterbegin', bulbasaurDetails);
+    });
+}
+
+displayBulbasaurDetails();
+loadPokemonItens(offset, limit);
+
+
+
+
 
 loadPokemonItens(offset, limit)
 
